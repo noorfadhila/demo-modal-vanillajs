@@ -1,8 +1,8 @@
 const url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=e4acc365862542e3b3b6e2d0d9655f08&pageSize=6";
 const listArticles = document.querySelector("#list-articles");
 
-
 const loopData = (data) => {
+    console.log(data)
     let h = "";
     h += `<div class="flex-container">`
     data.articles.map(datas => {
@@ -31,10 +31,4 @@ const createRequest = (url) => {
         .then(() => loadModal());
 }
 
-
-// window.addEventListener('DOMContentLoaded', () => {
-//     createRequest(url);
-// });
-
 createRequest(url);
-

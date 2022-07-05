@@ -28,7 +28,7 @@ const loadModal = () => {
             const dataImg = btnClicked.getAttribute('data-img');
             modalTitle.textContent = dataTitle;
             modalBody.innerHTML = `
-                <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="" src="${dataImg}" data-holder-rendered="true">
+                <div class="card-img-top" alt="Headline News" style="background-image: url('${dataImg}')"></div>
                 <p>Author: ${dataAuthor}</p>
                 <p>Published At: ${dataDate}</p>
                 <p>${dataDesc}</p>
@@ -54,3 +54,7 @@ const loadModal = () => {
         }
     })
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    loadModal();
+});
